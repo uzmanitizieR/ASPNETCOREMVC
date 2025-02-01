@@ -1,0 +1,45 @@
+﻿@model ASPNETCOREMVCPROJE.Models.RegisterViewModel
+
+@{
+    ViewData["Title"] = "Kayıt Ol";
+}
+
+<div class="row">
+    <div class="col-4">
+        <h1>@ViewData["Title"]</h1>
+
+        <form method="post" asp-action="Register" asp-controller="Account">
+            <div class="mb-3">
+                <label asp-for="NameSurname" class="form-label"></label>
+                <input asp-for="NameSurname" class="form-control" />
+                <span asp-validation-for="NameSurname" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Username" class="form-label"></label>
+                <input asp-for="Username" class="form-control" />
+                <span asp-validation-for="Username" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Password" class="form-label"></label>
+                <input asp-for="Password" type="password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="RePassword" class="form-label"></label>
+                <input asp-for="RePassword" type="password" class="form-control" />
+                <span asp-validation-for="RePassword" class="text-danger"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Kayıt Ol</button>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
+}
